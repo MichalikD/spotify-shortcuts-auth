@@ -94,9 +94,17 @@ async function handleCallback() {
     if(code) {
 
         document.getElementById("status").innerHTML =
-            "Login erfolgreich.<br><br>Authorization Code:<br>" +
-            code;
-
+            "Login erfolgreich.<br>Zurück zu Kurzbefehle...";
+    
+        const callback =
+            "shortcuts://x-callback-url/run-shortcut" +
+            "?name=Spotify%20Login%20Callback" +
+            "&input=text" +
+            "&text=" +
+            encodeURIComponent(code);
+    
+        window.location.href = callback;
+    
         return;
     }
 
