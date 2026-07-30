@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <title>Spotify Shortcuts Auth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-    <h2>Spotify Authentication</h2>
-    <p>You can close this page.</p>
+    <h2>Spotify Anmeldung</h2>
+    <p id="status">Verbindung wird hergestellt...</p>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    const error = params.get("error");
+
+    const status = document.getElementById("status");
+
+    if (error) {
+        status.innerHTML = "Fehler: " + error;
+    }
+    else if (code) {
+        status.innerHTML = "Erfolgreich. Zurück zu Kurzbefehle...";
+
+        const callback = "shortcuts://x-callback-url/run-shortcut"
+            + "?name=Spotify%20Login%20Callback"
+            + "&input=text"
+            + "&text="
+            + encodeURIComponent(code);
+
+        window.location.href = callback;
+    }
+    else {
+        status.innerHTML = "Kein Code gefunden.";
+    }
+</script>
+
 </body>
 </html>
