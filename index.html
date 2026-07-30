@@ -1,39 +1,110 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Spotify Shortcuts Auth</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Spotify Shortcuts Auth</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    <h2>Spotify Anmeldung</h2>
-    <p id="status">Verbindung wird hergestellt...</p>
+<h2>Spotify Login</h2>
+<p id="status">Starte Anmeldung...</p>
 
 <script>
+const CLIENT_ID = "DEINE_CLIENT_ID";
+const REDIRECT_URI = "https://DEINNAME.github.io/spotify-shortcuts-auth/index.html";
+
+const SCOPES = [
+  "user-read-playback-state",
+  "user-modify-playback-state",
+  "playlist-read-private"
+].join(" ");
+
+function base64UrlEncode(arrayBuffer) {
+    let binary = "";
+    let bytes = new Uint8Array(arrayBuffer);
+
+    bytes.forEach(byte => {
+        binary += String.fromCharCode(byte);
+    });
+
+    return btoa(binary)
+        .replace(/\+/g, "-")
+        .replace(/\//g, "_")
+        .replace(/=/g, "");
+}
+
+function generateRandomString(length) {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~";
+    let result = "";
+
+    const randomValues = new Uint8Array(length);
+    crypto.getRandomValues(randomValues);
+
+    randomValues.forEach(value => {
+        result += chars[value % chars.length];
+    });
+
+    return result;
+}
+
+async function createChallenge(verifier) {
+    const encoder = new TextEncoder();
+
+    const data = encoder.encode(verifier);
+
+    const hash = await crypto.subtle.digest(
+        "SHA-256",
+        data
+    );
+
+    return base64UrlEncode(hash);
+}
+
+async function startLogin() {
+
+    const verifier = generateRandomString(64);
+
+    sessionStorage.setItem(
+        "spotify_code_verifier",
+        verifier
+    );
+
+    const challenge = await createChallenge(verifier);
+
+    const url =
+        "https://accounts.spotify.com/authorize" +
+        "?client_id=" + CLIENT_ID +
+        "&response_type=code" +
+        "&redirect_uri=" + encodeURIComponent(REDIRECT_URI) +
+        "&code_challenge_method=S256" +
+        "&code_challenge=" + challenge +
+        "&scope=" + encodeURIComponent(SCOPES);
+
+    window.location.href = url;
+}
+
+
+async function handleCallback() {
+
     const params = new URLSearchParams(window.location.search);
+
     const code = params.get("code");
-    const error = params.get("error");
 
-    const status = document.getElementById("status");
+    if(code) {
 
-    if (error) {
-        status.innerHTML = "Fehler: " + error;
+        document.getElementById("status").innerHTML =
+            "Login erfolgreich.<br><br>Authorization Code:<br>" +
+            code;
+
+        return;
     }
-    else if (code) {
-        status.innerHTML = "Erfolgreich. Zurück zu Kurzbefehle...";
 
-        const callback = "shortcuts://x-callback-url/run-shortcut"
-            + "?name=Spotify%20Login%20Callback"
-            + "&input=text"
-            + "&text="
-            + encodeURIComponent(code);
+    startLogin();
+}
 
-        window.location.href = callback;
-    }
-    else {
-        status.innerHTML = "Kein Code gefunden.";
-    }
+handleCallback();
+
 </script>
 
 </body>
