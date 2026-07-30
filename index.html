@@ -96,12 +96,21 @@ async function handleCallback() {
         document.getElementById("status").innerHTML =
             "Login erfolgreich.<br>Zurück zu Kurzbefehle...";
     
+        const verifier = sessionStorage.getItem(
+            "spotify_code_verifier"
+        );
+        
         const callback =
             "shortcuts://x-callback-url/run-shortcut" +
             "?name=Spotify%20Login%20Callback" +
             "&input=text" +
             "&text=" +
-            encodeURIComponent(code);
+            encodeURIComponent(
+                JSON.stringify({
+                    code: code,
+                    verifier: verifier
+                })
+            );
     
         window.location.href = callback;
     
