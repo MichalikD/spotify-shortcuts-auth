@@ -1,6 +1,6 @@
-> **Audience:** Developers / Advanced Users
-
 # Architecture
+
+> **Audience:** Developers / Advanced Users
 
 Spotify True Shuffle is divided into two independent layers.
 
