@@ -1,6 +1,6 @@
-> **Audience:** End Users
-
 # Installation
+
+> **Audience:** End Users
 
 This guide describes the complete installation process for Spotify True Shuffle.
 
