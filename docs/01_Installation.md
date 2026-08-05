@@ -59,6 +59,20 @@ App Store:
 
 ---
 
+## Redirect URI
+
+Add the Redirect URI that points to your GitHub Pages installation.
+
+Example
+
+```
+https://YOUR_GITHUB_USERNAME.github.io/spotify-shortcuts-auth/
+```
+
+The Redirect URI **must exactly match** the value configured inside Spotify True Shuffle.
+
+---
+
 # Spotify Developer
 
 Open
@@ -80,20 +94,6 @@ Description
 ```
 Spotify Shuffle Framework
 ```
-
----
-
-## Redirect URI
-
-Add the Redirect URI that points to your GitHub Pages installation.
-
-Example
-
-```
-https://YOUR_GITHUB_USERNAME.github.io/spotify-shortcuts-auth/
-```
-
-The Redirect URI **must exactly match** the value configured inside Spotify True Shuffle.
 
 ---
 
