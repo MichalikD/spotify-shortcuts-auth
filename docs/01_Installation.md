@@ -59,64 +59,6 @@ App Store:
 
 ---
 
-## Redirect URI
-
-Add the Redirect URI that points to your GitHub Pages installation.
-
-Example
-
-```
-https://YOUR_GITHUB_USERNAME.github.io/spotify-shortcuts-auth/
-```
-
-The Redirect URI **must exactly match** the value configured inside Spotify True Shuffle.
-
----
-
-# Spotify Developer
-
-Open
-
-https://developer.spotify.com/dashboard
-
-Create a new application.
-
-Example
-
-```
-Name
-
-Spotify True Shuffle
-```
-
-Description
-
-```
-Spotify Shuffle Framework
-```
-
----
-
-## Client ID
-
-After creating the application copy
-
-```
-Client ID
-```
-
-This value will later be stored inside
-
-```
-config.json
-```
-
-The Client Secret is **not** required.
-
-Spotify True Shuffle uses the PKCE authentication flow.
-
----
-
 # GitHub Pages
 
 Create a new repository.
@@ -168,6 +110,64 @@ git clone ...
 or
 
 Download ZIP.
+
+---
+
+# Spotify Developer
+
+Open
+
+https://developer.spotify.com/dashboard
+
+Create a new application.
+
+Example
+
+```
+Name
+
+Spotify True Shuffle
+```
+
+Description
+
+```
+Spotify Shuffle Framework
+```
+
+---
+
+## Redirect URI
+
+Add the Redirect URI that points to your GitHub Pages installation.
+
+Example
+
+```
+https://YOUR_GITHUB_USERNAME.github.io/spotify-shortcuts-auth/
+```
+
+The Redirect URI **must exactly match** the value configured inside Spotify True Shuffle.
+
+---
+
+## Client ID
+
+After creating the application copy
+
+```
+Client ID
+```
+
+This value will later be stored inside
+
+```
+config.json
+```
+
+The Client Secret is **not** required.
+
+Spotify True Shuffle uses the PKCE authentication flow.
 
 ---
 
