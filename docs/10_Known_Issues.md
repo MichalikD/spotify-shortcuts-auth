@@ -109,6 +109,12 @@ Expected API behavior.
 
 ---
 
+## Refresh Token Expiration
+
+Spotify refresh tokens expire after six months.
+
+When a refresh token expires, automatic refresh is no longer possible and the user must run Spotify Login again.
+
 # Framework Limitations
 
 These behaviors are currently part of Spotify True Shuffle by design.
