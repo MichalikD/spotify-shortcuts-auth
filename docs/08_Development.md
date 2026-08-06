@@ -34,6 +34,25 @@ Whenever possible, development should follow the Open/Closed Principle:
 
 ---
 
+# Spotify Web API Development Rules
+
+Spotify True Shuffle follows Spotify's official Web API development guidance.
+
+Development must:
+
+- use Spotify's OpenAPI specification as the source of truth for endpoint paths, parameters and response schemas,
+- use Authorization Code with PKCE for user-specific access,
+- never expose a Client Secret in client-side code,
+- use HTTPS redirect URIs,
+- request only the minimum required scopes,
+- refresh access tokens and require reauthentication when refresh tokens expire,
+- respect HTTP 429 responses and the Retry-After header,
+- avoid deprecated endpoints,
+- preserve meaningful Spotify API error messages,
+- comply with the Spotify Developer Terms.
+
+Spotify endpoint paths and response fields must not be implemented from memory when the official specification is available.
+
 # Core Principles
 
 Every contribution should follow these principles.
