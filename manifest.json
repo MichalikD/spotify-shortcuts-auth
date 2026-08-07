@@ -21,7 +21,7 @@
     "scriptable_folder": "Scriptable",
     "installer_test_folder": "Shortcuts/Spotify True Shuffle Installer Test",
     "backup_folder": "Shortcuts/Spotify True Shuffle Backups",
-    "config_folder": "Shortcuts/Spotify True Shuffle"
+    "data_folder": "Shortcuts/Spotify True Shuffle"
   },
 
   "shortcuts": [
