@@ -68,7 +68,7 @@ Create a new repository.
 Example
 
 ```
-spotify-shortcuts-auth
+spotify-true-shuffle
 ```
 
 Enable
@@ -96,7 +96,7 @@ main
 After deployment your GitHub Pages URL should look similar to
 
 ```
-https://YOUR_USERNAME.github.io/spotify-shortcuts-auth/
+https://MichalikD.github.io/spotify-true-shuffle/
 ```
 
 ---
@@ -146,7 +146,7 @@ Add the Redirect URI that points to your GitHub Pages installation.
 Example
 
 ```
-https://YOUR_GITHUB_USERNAME.github.io/spotify-shortcuts-auth/
+https://MichalikD.github.io/spotify-true-shuffle/
 ```
 
 The Redirect URI **must exactly match** the value configured inside Spotify True Shuffle.
