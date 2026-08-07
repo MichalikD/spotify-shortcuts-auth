@@ -13,8 +13,8 @@
   },
 
   "installer": {
-    "version": "1.0.0",
-    "icloud_url": "https://www.icloud.com/shortcuts/INSTALLER_ID"
+    "version": "0.2.0",
+    "icloud_url": null
   },
 
   "shortcuts": [
