@@ -7,9 +7,9 @@
     "channel": "beta",
     "minimum_ios": "26.0",
     "minimum_scriptable": null,
-    "repository_url": "https://github.com/YOUR_USERNAME/spotify-true-shuffle",
-    "documentation_url": "https://github.com/YOUR_USERNAME/spotify-true-shuffle/tree/main/docs",
-    "release_notes_url": "https://github.com/YOUR_USERNAME/spotify-true-shuffle/releases/tag/v0.9.0"
+    "repository_url": "https://github.com/MichalikD/spotify-true-shuffle",
+    "documentation_url": "https://github.com/MichalikD/spotify-true-shuffle/tree/main/docs",
+    "release_notes_url": "https://github.com/MichalikD/spotify-true-shuffle/releases/tag/v0.9.0"
   },
 
   "installer": {
@@ -138,7 +138,7 @@
       "filename": "Spotify Shuffle Engine v5.js",
       "version": "5.0.0",
       "required": true,
-      "download_url": "https://raw.githubusercontent.com/YOUR_USERNAME/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Engine%20v5.js",
+      "download_url": "https://raw.githubusercontent.com/MichalikD/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Engine%20v5.js",
       "sha256": null
     },
     {
@@ -146,7 +146,7 @@
       "filename": "Spotify Shuffle Common.js",
       "version": "1.0.0",
       "required": true,
-      "download_url": "https://raw.githubusercontent.com/YOUR_USERNAME/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Common.js",
+      "download_url": "https://raw.githubusercontent.com/MichalikD/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Common.js",
       "sha256": null
     },
     {
@@ -154,7 +154,7 @@
       "filename": "Spotify Shuffle Validation.js",
       "version": "1.0.0",
       "required": true,
-      "download_url": "https://raw.githubusercontent.com/YOUR_USERNAME/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Validation.js",
+      "download_url": "https://raw.githubusercontent.com/MichalikD/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Validation.js",
       "sha256": null
     },
     {
@@ -162,7 +162,7 @@
       "filename": "Spotify Shuffle Output.js",
       "version": "1.0.0",
       "required": true,
-      "download_url": "https://raw.githubusercontent.com/YOUR_USERNAME/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Output.js",
+      "download_url": "https://raw.githubusercontent.com/MichalikD/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Output.js",
       "sha256": null
     },
     {
@@ -170,7 +170,7 @@
       "filename": "Spotify Shuffle Artist.js",
       "version": "1.0.0",
       "required": true,
-      "download_url": "https://raw.githubusercontent.com/YOUR_USERNAME/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Artist.js",
+      "download_url": "https://raw.githubusercontent.com/MichalikD/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Artist.js",
       "sha256": null
     },
     {
@@ -178,7 +178,7 @@
       "filename": "Spotify Shuffle Album.js",
       "version": "1.0.0",
       "required": true,
-      "download_url": "https://raw.githubusercontent.com/YOUR_USERNAME/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Album.js",
+      "download_url": "https://raw.githubusercontent.com/MichalikD/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Album.js",
       "sha256": null
     },
     {
@@ -186,7 +186,7 @@
       "filename": "Spotify Shuffle Balanced.js",
       "version": "1.0.0",
       "required": true,
-      "download_url": "https://raw.githubusercontent.com/YOUR_USERNAME/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Balanced.js",
+      "download_url": "https://raw.githubusercontent.com/MichalikD/spotify-true-shuffle/main/scriptable/Spotify%20Shuffle%20Balanced.js",
       "sha256": null
     },
     {
@@ -194,14 +194,14 @@
       "filename": "Spotify Flatten Track Lists.js",
       "version": "1.0.0",
       "required": true,
-      "download_url": "https://raw.githubusercontent.com/YOUR_USERNAME/spotify-true-shuffle/main/scriptable/Spotify%20Flatten%20Track%20Lists.js",
+      "download_url": "https://raw.githubusercontent.com/MichalikD/spotify-true-shuffle/main/scriptable/Spotify%20Flatten%20Track%20Lists.js",
       "sha256": null
     }
   ],
 
   "configuration": {
     "config_version": 2,
-    "config_template_url": "https://raw.githubusercontent.com/YOUR_USERNAME/spotify-true-shuffle/main/config/config.example.json",
-    "playlists_template_url": "https://raw.githubusercontent.com/YOUR_USERNAME/spotify-true-shuffle/main/config/playlists.example.json"
+    "config_template_url": "https://raw.githubusercontent.com/MichalikD/spotify-true-shuffle/main/config/config.example.json",
+    "playlists_template_url": "https://raw.githubusercontent.com/MichalikD/spotify-true-shuffle/main/config/playlists.example.json"
   }
 }
