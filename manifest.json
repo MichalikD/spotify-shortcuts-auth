@@ -17,6 +17,13 @@
     "icloud_url": null
   },
 
+  "paths": {
+    "scriptable_folder": "Shortcuts/Scriptable",
+    "installer_test_folder": "Shortcuts/Test",
+    "backup_folder": "Shortcuts/Spotify True Shuffle Backups",
+    "config_folder": "Shortcuts/Spotify True Shuffle"
+  },
+
   "shortcuts": [
     {
       "id": "spotify_true_shuffle",
